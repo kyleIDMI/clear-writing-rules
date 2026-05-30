@@ -1,5 +1,7 @@
 # no-ai-slop-writing-rules
 
+[![skills.sh](https://skills.sh/b/realrossmanngroup/no_ai_slop_writing_rules)](https://skills.sh/realrossmanngroup/no_ai_slop_writing_rules)
+
 > # 👋 Hi, you were probably sent here.
 >
 > ## If someone handed you a link to this repo, it is because you sent them AI-generated shit so obviously AI-generated that they stopped reading partway through and went looking for a polite way to say "run it through a human first."
@@ -22,15 +24,41 @@
 
 ---
 
-A portable Claude Code reference for writing in Louis Rossmann's voice without AI slop. It is general-purpose: essays, scripts, posts, documentation, emails, anything made of sentences. It is not tied to any wiki, CMS, or publishing system.
+A portable Agent Skills package for writing in Louis Rossmann's voice without AI slop. It is general-purpose: essays, scripts, posts, documentation, emails, anything made of sentences. It is not tied to any wiki, CMS, or publishing system.
+
+Compatible with Claude Code, OpenAI Codex, Cursor, Windsurf, and agents that follow the [Agent Skills specification](https://agentskills.io/specification.md).
 
 ## What it does
 
-It gives Claude two things. First, a hard rule set that strips the patterns marking machine-generated text: emdashes, intensifiers, filler phrases, hollow statements, fabricated facts, AI transition words, dramatic headings, and the rest. Second, a data-driven voice profile built from corpus analysis of 513,683 words of Rossmann's writing: testable-number density, high sentence-length variance, claim-then-proof paragraph structure, contractions, the ampersand habit, and contempt shown through precision rather than adjectives.
+It gives an agent two things. First, a hard rule set that strips the patterns marking machine-generated text: emdashes, intensifiers, filler phrases, hollow statements, fabricated facts, AI transition words, dramatic headings, and the rest. Second, a data-driven voice profile built from corpus analysis of 513,683 words of Rossmann's writing: testable-number density, high sentence-length variance, claim-then-proof paragraph structure, contractions, the ampersand habit, and contempt shown through precision rather than adjectives.
 
 ## How to use it
 
-Drop this folder next to a project, or point Claude Code at it. When you ask Claude to write or edit prose, it reads `CLAUDE.md` and the two skills, writes against the rules, then self-checks the output against the banned-words reference before returning it.
+Install the skills into an agent project, drop this folder next to a project, or point Claude Code at it. When you ask an agent to write or edit prose, it reads the two skills, writes against the rules, then self-checks the output against the banned-words reference before returning it.
+
+## Installation
+
+### CLI install
+
+```bash
+npx skills add realrossmanngroup/no_ai_slop_writing_rules
+```
+
+Skills install to `.agents/skills/` in your project.
+
+### Claude Code plugin
+
+```bash
+/plugin marketplace add realrossmanngroup/no_ai_slop_writing_rules
+/plugin install no-ai-slop-writing-rules
+```
+
+### Clone and copy
+
+```bash
+git clone https://github.com/realrossmanngroup/no_ai_slop_writing_rules.git
+cp -r no_ai_slop_writing_rules/skills/* your-project/.agents/skills/
+```
 
 You can also read the files yourself as a style guide. Every file here obeys its own rules, so they double as worked examples.
 
@@ -38,10 +66,13 @@ You can also read the files yourself as a style guide. Every file here obeys its
 
 | File | Contents |
 |---|---|
-| `CLAUDE.md` | The entrypoint. States the purpose, summarizes the voice, sets the operating rules, and lists all 24 anti-slop rules. |
-| `.claude/skills/no-ai-slop/SKILL.md` | The anti-slop rules as actionable guidance, with WRONG/RIGHT worked examples and a self-check pass. |
-| `.claude/skills/no-ai-slop/references/ai-writing-detection.md` | The full banned-words reference: verbs, adjectives, transitions, phrases, intensifiers, heading anti-patterns, academic tells, hedging markers, and structural and statistical patterns. |
-| `.claude/skills/rossmann-voice/SKILL.md` | The voice profile: sentence-level rules, paragraph structure, drift prevention, the Claim-Mechanism-Reality argument pattern, a vocabulary guide, a DO/DON'T table, and the statistical fingerprint. |
+| `CLAUDE.md` | Claude Code entrypoint. States the purpose, summarizes the voice, sets the operating rules, and lists all 24 anti-slop rules. |
+| `AGENTS.md` | Cross-agent repository instructions and publishing format notes. |
+| `.claude-plugin/marketplace.json` | Claude Code plugin marketplace manifest. |
+| `skills/no-ai-slop/SKILL.md` | The anti-slop rules as actionable guidance, with WRONG/RIGHT worked examples and a self-check pass. |
+| `skills/no-ai-slop/references/ai-writing-detection.md` | The full banned-words reference: verbs, adjectives, transitions, phrases, intensifiers, heading anti-patterns, academic tells, hedging markers, and structural and statistical patterns. |
+| `skills/rossmann-voice/SKILL.md` | The voice profile: sentence-level rules, paragraph structure, drift prevention, the Claim-Mechanism-Reality argument pattern, a vocabulary guide, a DO/DON'T table, and the statistical fingerprint. |
+| `.claude/skills/` | Claude Code project-local mirror of the published skills. |
 
 ## Scope
 

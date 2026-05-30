@@ -1,0 +1,24 @@
+{
+  "name": "no-ai-slop-writing-rules",
+  "owner": {
+    "name": "Rossmann Group",
+    "url": "https://github.com/realrossmanngroup"
+  },
+  "metadata": {
+    "description": "Portable no-AI-slop writing rules and Rossmann-style prose guidance for agentic writing workflows",
+    "version": "1.0.0",
+    "repository": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules"
+  },
+  "plugins": [
+    {
+      "name": "no-ai-slop-writing-rules",
+      "description": "Writing skills for removing AI slop and writing in a precise Rossmann-style voice",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/no-ai-slop",
+        "./skills/rossmann-voice"
+      ]
+    }
+  ]
+}
