@@ -72,7 +72,7 @@ The pattern behind most fixes is the same: replace a vague claim with a specific
 
 **19. No fabricated attributions.** Never claim a person, organization, or company said something unless it is real and verifiable. Writing "Manager X stated..." or "the customer argued..." without a real source is a fabrication and a liability risk. Do not infer someone's position from their role or reputation.
 - WRONG: "The underwriting team agreed this was the best approach."
-- RIGHT: "Jennifer confirmed on the March 12 call that the current scope is acceptable."
+- RIGHT: "The client approved the current scope on the May 6 call."
 
 **20. No AI transition phrases.** Banned: "Furthermore", "Moreover", "Notwithstanding", "That being said", "At its core", "In essence", "It is worth noting that", "In the landscape of", "To put it simply." Use plain connectors: also, and, but, however, still.
 
