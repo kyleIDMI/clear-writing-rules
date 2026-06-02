@@ -31,6 +31,15 @@ Anyone at the company who drafts written communication with an AI assistant: sup
 
 ## Installation
 
+### Desktop or web app (claude.ai)
+
+1. Enable the prerequisite: in Claude, go to **Settings > Capabilities** and turn on **Code execution and file creation**.
+2. Download the skill ZIP: [clear-writing.zip](https://github.com/kyleIDMI/clear-writing-rules/releases/latest/download/clear-writing.zip) (always the latest release).
+3. Go to **Customize > Skills**, click **+**, choose **Create skill**, and upload the ZIP.
+4. It appears under **Personal skills**. Toggle it on.
+
+An admin can upload the same ZIP as an organization skill to make it available to everyone automatically.
+
 ### Claude Code plugin
 
 ```bash
