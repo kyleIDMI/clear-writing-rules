@@ -25,57 +25,11 @@ This is a writing-quality and accuracy aid. It is not a tool for disguising AI a
 - Before returning any prose, self-check it against `.claude/skills/clear-writing/references/ai-writing-detection.md`. Scan for banned verbs, adjectives, transitions, phrases, intensifiers, heading anti-patterns, and the structural and statistical tells. Fix what you find.
 - Apply the rules to your own output too. This file, every skill, and every reply obeys the rules it states.
 
-## THE RULES
+## The rules
 
-These are non-negotiable for accuracy and phrasing. Tone-scoped rules (9, 14) are noted as such.
+The full, self-contained rule set (all 24 rules, with worked examples) lives in the skill itself: `skills/clear-writing/SKILL.md` (mirrored at `.claude/skills/clear-writing/SKILL.md`). That file is the single source of truth, so it travels intact when the skill is installed as a plugin or pushed as an organization skill. This `CLAUDE.md` is the repo entrypoint only; do not duplicate the rule list here, or the two copies will drift.
 
-1. **No emdashes.** The character is banned. Use a semicolon, a period, a comma, parentheses, or restructure the sentence.
-
-2. **No unsourced statistics.** Every number must be real and attributable. If you cannot point to where it comes from, do not write it. A made-up figure is worse than no figure.
-
-3. **No parenthetical clarifications in headings.** Trust the reader.
-
-4. **No intensifiers.** "Extremely", "dramatically", "exceptionally", "significantly", "incredibly", "remarkably", "truly", "absolutely", "literally" are all banned. Prove it with a fact or cut the word.
-
-5. **No hollow statements.** Every claim must end with a concrete, verifiable detail. If it cannot, delete the sentence.
-
-6. **No repeated talking points.** Say it once. Duplicates are padding.
-
-7. **Vary structure.** Three consecutive sections or paragraphs with identical layout is a pattern. Break it.
-
-8. **Reference without narrating the reference.** Do not write "as discussed above" or "as we will see." Make the connection and move on.
-
-9. **No performative urgency without a reason (tone-scoped).** Manufactured urgency ("act now") needs a concrete consequence (a real deadline, a real penalty) in the same sentence or it gets cut. Genuine urgency that the situation actually carries is fine; just state the real reason.
-
-10. **No scare quotes on normal words.** Use quotation marks only for actual quotations from a named source.
-
-11. **No filler phrases.** Banned: "In today's world", "It's important to note", "When it comes to", "At the end of the day", "In the realm of", "It goes without saying", "This is where X comes in", "Look no further", "Our team of experts."
-
-12. **Never start a sentence with "Whether you're."**
-
-13. **Write like a person who did the work, not a copywriter.** Direct, specific, well-grounded. If a sentence could appear on any generic site unchanged, it is too generic. Delete it or make it specific with a fact, a name, a date, or a documented detail.
-
-14. **No synthetic enthusiasm (tone-scoped).** Do not manufacture hype or cheerlead with empty superlatives. This does not ban warmth: a genuine "thanks for your patience" or a single, sincere exclamation point in a personal note is fine. The rule targets fake excitement, not friendliness. Tone is the writer's call.
-
-15. **No weasel words.** "Helps ensure", "may be able to", "can potentially"; either it does or it does not. Commit or cut.
-
-16. **No narrative, dramatic, or AI-generic headings.** Headings must be concrete and descriptive. Do not use narrative framing, thriller-style mystery, clickbait structure, or vague analytical headings ("Broader pattern", "Wider context", "Larger trend"). A heading describes what the section contains, not what it means. Name the subject, not the abstraction.
-
-17. **No fabricated case studies or scenarios.** Never write narrative scenarios presented as real events unless you are describing a specific, documented incident you can point to. Do not invent outcomes, actions, or stories.
-
-18. **No fabricated history or milestones.** Do not invent dates for events, launches, founding, or milestones. Every date and event must be real.
-
-19. **No fabricated attributions.** Never claim a person, organization, or company said something unless it is real and verifiable. Writing "Manager X stated..." or "the customer argued..." without a real source is a fabrication and a liability risk. Every attributed quote or position must trace to a real document, transcript, message, or report. Do not assume what someone's position is based on their role or reputation.
-
-20. **No AI transition phrases.** Banned: "Furthermore", "Moreover", "Notwithstanding", "That being said", "At its core", "In essence", "It is worth noting that", "In the landscape of", "To put it simply." Use plain connectors: also, and, but, however, still.
-
-21. **No AI verbs.** Banned: delve, leverage, utilize, facilitate, foster, bolster, underscore, unveil, navigate (metaphorical), streamline, endeavour, ascertain, elucidate. Use their plain equivalents: explore, use, help, encourage, strengthen, highlight, reveal, manage, simplify, try, find out, explain.
-
-22. **No academic AI tells.** Banned: "shed light on", "pave the way for", "a myriad of", "a plethora of", "paramount", "pertaining to", "prior to" (use "before"), "subsequent to" (use "after"), "in light of" (use "because of"), "with respect to" (use "about"), "in terms of" (use "about" or "for"), "the fact that" (rewrite the sentence).
-
-23. **Quote sources accurately, and set off the long ones.** When you put text in quotation marks and attribute it to a source, every word must match the source exactly. Do not correct grammar, change plural to singular, swap pronouns, or clean up the wording. If you must alter a quote for clarity, mark the change with square brackets; if the wording is awkward, paraphrase without quotation marks instead. Name the speaker and the medium when you introduce a quote. Keep short quotes run-in inside the sentence. Set off a long quotation (more than about fifteen words) as its own indented block, introduced by a one-sentence attribution clause.
-
-24. **No research-process narration.** Report the facts you can support and silently omit what you cannot. Do not narrate what you searched for and failed to find ("could not be located", "was not found", "no record was found"). Do not attach an "as of [date]" qualifier to your own inability to find something. Do not add meta-commentary about how the text was put together. If a fact cannot be supported, delete it. Do not tell the reader you looked.
+In short, the rules cover: no em dashes; no unsourced numbers, dates, quotes, attributions, or invented history; no intensifiers, filler phrases, weasel words, AI verbs, or AI transitions; no dramatic headings; vary structure; and quote sources exactly. Rules 9 and 14 are tone-scoped (they ban manufactured hype, not genuine warmth).
 
 ## Banned Words and Phrases
 

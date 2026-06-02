@@ -5,103 +5,100 @@ description: "Rules and worked examples for writing clear, accurate, human-sound
 
 # Clear Writing
 
-This skill makes an agent write clearly and accurately, without the phrasing tells of unedited AI output. It enforces two things: every fact is real and supportable, and the prose sounds like a person wrote it. It does not dictate tone; a customer apology and a status update need different registers, and that judgment stays with the writer. The tone-scoped rules (9 and 14 in `CLAUDE.md`) target manufactured hype, not genuine warmth.
+This skill makes an agent write clearly and accurately, without the phrasing tells of unedited AI output. It enforces two things: every fact is real and supportable, and the prose sounds like a person wrote it. It does not dictate tone; a customer apology and a status update need different registers, and that judgment stays with the writer. The tone-scoped rules (9 and 14) target manufactured hype, not genuine warmth.
 
-The full rule list lives in the project `CLAUDE.md` (rules 1 through 24). This skill turns the rules that have worked examples into actionable guidance: each shows a WRONG version and a RIGHT version. The pattern behind every fix is the same: replace the vague claim with a specific, checkable fact.
+This file is self-contained: the full rule set is below. The detailed banned-word and pattern lists are in `references/ai-writing-detection.md`; self-check against that file before returning prose.
 
-## Rule 1: No emdashes
+## Operating procedure
 
-The character is banned. Use a semicolon, a period, a comma, or restructure.
+1. Before writing or editing any prose, read these rules.
+2. Draft against them.
+3. Before returning the text, run the self-check at the bottom and the `references/ai-writing-detection.md` scan. Fix what you find.
+4. Apply the rules to your own output, not just the user's.
 
+## The 24 rules
+
+The pattern behind most fixes is the same: replace a vague claim with a specific, checkable fact.
+
+**1. No em dashes.** Use a semicolon, a period, a comma, parentheses, or restructure.
 - WRONG: "The policy -- which affected millions -- was later reversed."
-- RIGHT: "The policy affected millions of devices. The company reversed it in December 2017."
+- RIGHT: "The policy affected millions of accounts. The company reversed it in December."
 
-## Rule 4: No intensifiers
+**2. No unsourced statistics.** Every number must be real and attributable. If you cannot point to where it comes from, do not write it. A made-up figure is worse than no figure.
 
-"Significantly", "dramatically", "extremely" and their kin are placeholders for evidence. Replace the word with the number it was standing in for.
+**3. No parenthetical clarifications in headings.** Trust the reader.
 
-- WRONG: "The pricing was significantly higher than the cost of the part."
-- RIGHT: "They charged $1,200 for a repair that needed a $5 chip."
+**4. No intensifiers.** "Extremely", "dramatically", "exceptionally", "significantly", "incredibly", "remarkably", "truly", "absolutely", "literally" are banned. Prove it with a fact or cut the word.
+- WRONG: "The premium increased significantly at renewal."
+- RIGHT: "The six-month premium went from $842 to $1,016."
 
-## Rule 5: No hollow statements
+**5. No hollow statements.** Every claim must end with a concrete, verifiable detail. If it cannot, delete the sentence.
+- WRONG: "This change has had a significant impact on our customers."
+- RIGHT: "This change reduced duplicate invoices from about 40 per month to zero."
 
-A sentence that asserts importance without a detail says nothing. End every claim on a concrete fact.
+**6. No repeated talking points.** Say it once. Duplicates are padding.
 
-- WRONG: "This practice has had a significant impact on people."
-- RIGHT: "The company replaced 11 million batteries in 2018, against the 1 to 2 million it had expected."
+**7. Vary structure.** Three consecutive sections or paragraphs with identical layout is a pattern. Break it. Vary paragraph count, sentence rhythm, and how each section opens.
 
-## Rule 7: No structural repetition (repetitive layouts)
+**8. Reference without narrating the reference.** Do not write "as discussed above" or "as we will see." Make the connection and move on.
 
-Three sections built from the same template read as machine output, even when each fact is true. Vary paragraph count, sentence rhythm, and how each section opens.
+**9. No performative urgency without a reason (tone-scoped).** Manufactured urgency ("act now") needs a concrete consequence (a real deadline, a real penalty) in the same sentence or it gets cut. Genuine urgency the situation actually carries is fine; state the real reason.
 
-- WRONG (three sections, identical shape):
-  ```
-  In [year], [party] did [thing]. This affected [number] people. [Party] responded by [action].
-  In [year], [party] did [thing]. This affected [number] people. [Party] responded by [action].
-  In [year], [party] did [thing]. This affected [number] people. [Party] responded by [action].
-  ```
-- RIGHT (vary the shape):
-  ```
-  Section one: a detailed narrative with timeline and context across two paragraphs.
-  Section two: a two-sentence summary, because the event is thinly documented.
-  Section three: opens with the party's stated justification, then the contradicting evidence.
-  ```
+**10. No scare quotes on normal words.** Use quotation marks only for actual quotations from a named source.
 
-## Rule 11: No filler phrases
+**11. No filler phrases.** Banned: "In today's world", "It's important to note", "When it comes to", "At the end of the day", "In the realm of", "It goes without saying", "This is where X comes in", "Look no further", "Our team of experts."
+- WRONG: "In today's world, billing errors can happen to anyone."
+- RIGHT: "Your account was drafted twice on March 3. Here is how we are correcting it."
 
-"In today's world", "It's important to note", "When it comes to" add length, not meaning. Open on the fact.
+**12. Never start a sentence with "Whether you're."**
 
-- WRONG: "In today's world, planned obsolescence affects many devices."
-- RIGHT: "Apple, Samsung, and Google have each faced lawsuits alleging planned obsolescence."
-
-## Rule 13: Write like a person who did the work, not a copywriter
-
-If a sentence could sit on any company's marketing page without changing a word, it is generic. Anchor it to something checkable.
-
+**13. Write like a person who did the work, not a copywriter.** Direct, specific, well-grounded. If a sentence could sit on any company's marketing page unchanged, it is too generic.
 - WRONG: "We are committed to providing excellent customer service."
 - RIGHT: "We respond to billing questions within one business day."
 
-## Rule 15: No weasel words
+**14. No synthetic enthusiasm (tone-scoped).** Do not manufacture hype or cheerlead with empty superlatives. This does not ban warmth: a genuine "thanks for your patience" or a single sincere exclamation point in a personal note is fine. The rule targets fake excitement, not friendliness. Tone is the writer's call.
 
-"May potentially", "can help to", "might be able to" hedge a claim into meaninglessness. Either the thing happens or it does not. Say which.
+**15. No weasel words.** "Helps ensure", "may be able to", "can potentially"; either it does or it does not. Commit or cut.
+- WRONG: "This update may potentially reduce duplicate notices."
+- RIGHT: "This update stops a duplicate notice from being mailed when a policy is set to Not Written."
 
-- WRONG: "Serialization may potentially prevent independent repair."
-- RIGHT: "Replacing an iPhone 15 camera module without the manufacturer's calibration software disables optical image stabilization."
+**16. No narrative, dramatic, or AI-generic headings.** Headings must be concrete and descriptive. No narrative framing, thriller-style mystery, clickbait, or vague analytical headings ("Broader pattern", "Wider context", "Larger trend"). Name the subject, not the abstraction.
+- WRONG: "The Hidden Cost of Renewal Delays"
+- RIGHT: "Why renewal invoices were not sent"
 
-## Rule 16: No dramatic headings
+**17. No fabricated case studies or scenarios.** Never present invented narratives as real events unless you are describing a specific, documented incident you can point to.
 
-A heading names what the section holds. It does not tease, dramatize, or abstract.
+**18. No fabricated history or milestones.** Do not invent dates for events, launches, or milestones. Every date and event must be real.
 
-- WRONG: "The Hidden Cost of Planned Obsolescence"
-- RIGHT: "Economic impact of shortened product lifespans"
+**19. No fabricated attributions.** Never claim a person, organization, or company said something unless it is real and verifiable. Writing "Manager X stated..." or "the customer argued..." without a real source is a fabrication and a liability risk. Do not infer someone's position from their role or reputation.
+- WRONG: "The underwriting team agreed this was the best approach."
+- RIGHT: "Jennifer confirmed on the March 12 call that the current scope is acceptable."
 
-## Rule 19: No fabricated attributions
+**20. No AI transition phrases.** Banned: "Furthermore", "Moreover", "Notwithstanding", "That being said", "At its core", "In essence", "It is worth noting that", "In the landscape of", "To put it simply." Use plain connectors: also, and, but, however, still.
 
-Never put a position in a named person's mouth from inference. State only what they actually did or said, with the real source.
+**21. No AI verbs.** Banned: delve, leverage, utilize, facilitate, foster, bolster, underscore, unveil, navigate (metaphorical), streamline, endeavour, ascertain, elucidate. Use plain equivalents: explore, use, help, encourage, strengthen, highlight, reveal, manage, simplify, try, find out, explain.
 
-- WRONG: "Senator Smith has argued that the right to repair is essential."
-- RIGHT: "Senator Smith co-sponsored the Fair Repair Act in January 2024."
+**22. No academic AI tells.** Banned: "shed light on", "pave the way for", "a myriad of", "a plethora of", "paramount", "pertaining to", "prior to" (use "before"), "subsequent to" (use "after"), "in light of" (use "because of"), "with respect to" (use "about"), "in terms of" (use "about" or "for"), "the fact that" (rewrite).
+
+**23. Quote sources accurately, and set off the long ones.** Every word inside quotation marks must match the source exactly. Do not correct grammar or swap pronouns; mark any alteration with square brackets, or paraphrase without quotation marks. Name the speaker and the medium. Keep short quotes run-in; set off a long quotation (more than about fifteen words) as its own indented block with a one-sentence attribution.
+
+**24. No research-process narration.** Report the facts you can support and silently omit what you cannot. Do not narrate failed searches ("could not be located", "no record was found"), do not attach "as of [date]" to your own inability to find something, and do not add meta-commentary about how the text was assembled. If a fact cannot be supported, delete it.
 
 ## Root-cause differentiation
 
-When you contrast two things, name the concrete difference that separates them. Do not assert that one is exempt, newer, better, or unaffected without saying what specifically makes it so.
-
-- WRONG: "2020+ Leaf models are unaffected and use the MyNISSAN app instead."
-- RIGHT: "2020+ Leaf models shipped with 4G/LTE telematics units connected to a newer cloud platform, replacing the 2G/3G units in earlier models. Those vehicles use the MyNISSAN app, which talks to a different backend."
-
-Whenever you say A differs from B, name the part, the version, the date, the mechanism, or the supply-chain change that makes the difference real. If you do not have that detail, do not imply the difference exists.
+When you contrast two things, name the concrete difference that separates them. Do not assert that one is newer, better, or exempt without saying what specifically makes it so. If you do not have that detail, do not imply the difference exists.
 
 ## Self-check before returning text
 
-Run this pass on every piece of prose before you hand it back. The full banned lists are in `references/ai-writing-detection.md`; check against them directly.
+Run this pass on every piece of prose. The full banned lists are in `references/ai-writing-detection.md`; check against them directly.
 
-1. Search for the emdash character. Remove every one (Rule 1).
-2. Scan for banned verbs (delve, leverage, utilize, foster, bolster, underscore, unveil, streamline) and replace with plain equivalents.
-3. Scan for banned adjectives and intensifiers (robust, comprehensive, pivotal, seamless, significantly, extremely, truly) and cut or replace.
+1. Search for the em dash character. Remove every one (Rule 1).
+2. Scan for banned verbs (delve, leverage, utilize, foster, bolster, underscore, streamline) and replace with plain equivalents.
+3. Scan for banned adjectives and intensifiers (robust, comprehensive, seamless, significantly, extremely, truly) and cut or replace.
 4. Scan for banned transitions and openers (Furthermore, Moreover, That being said, In today's world, It's worth noting that).
 5. Check every number: is it real and attributable? If not, cut it (Rule 2).
-6. Check every sentence ends on a concrete detail, not an assertion of importance (Rule 5).
+6. Check every claim ends on a concrete detail, not an assertion of importance (Rule 5).
 7. Check headings: does each name the content rather than tease it (Rule 16)?
 8. Check for repeated points and repeated section shapes (Rules 6, 7).
 9. Count hedging markers per paragraph. More than three is a red flag.
-10. Read it aloud. If a phrase would sound unnatural to a colleague, rewrite it.
+10. Read it aloud. If a phrase would sound unnatural to a colleague, rewrite it. Leave tone alone (Rules 9, 14).
