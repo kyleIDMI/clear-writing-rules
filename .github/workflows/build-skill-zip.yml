@@ -1,0 +1,51 @@
+name: Build skill ZIP
+
+# Rebuilds clear-writing.zip and attaches it to the latest release whenever the
+# skill changes, so the desktop/web download link is never stale.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills/clear-writing/**"
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Build clear-writing.zip
+        run: |
+          cd skills
+          zip -r ../clear-writing.zip clear-writing
+          cd ..
+          echo "ZIP contents:"
+          unzip -l clear-writing.zip
+
+      - name: Verify exactly one SKILL.md
+        run: |
+          count=$(unzip -l clear-writing.zip | grep -c '/SKILL.md')
+          echo "SKILL.md count: $count"
+          if [ "$count" -ne 1 ]; then
+            echo "ERROR: ZIP must contain exactly one SKILL.md, found $count"
+            exit 1
+          fi
+
+      - name: Attach ZIP to the target release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${{ github.event.release.tag_name }}"
+          if [ -z "$TAG" ]; then
+            TAG=$(gh release view --json tagName -q .tagName)
+          fi
+          echo "Attaching clear-writing.zip to release $TAG"
+          gh release upload "$TAG" clear-writing.zip --clobber
