@@ -1,23 +1,22 @@
 {
-  "name": "no-ai-slop-writing-rules",
+  "name": "clear-writing-rules",
   "owner": {
-    "name": "Rossmann Group",
-    "url": "https://github.com/realrossmanngroup"
+    "name": "kyleIDMI",
+    "url": "https://github.com/kyleIDMI"
   },
   "metadata": {
-    "description": "Portable no-AI-slop writing rules and Rossmann-style prose guidance for agentic writing workflows",
-    "version": "1.0.0",
-    "repository": "https://github.com/realrossmanngroup/no_ai_slop_writing_rules"
+    "description": "Portable clear-writing rules for accurate, human-sounding business communication in agentic writing workflows",
+    "version": "2.0.0",
+    "repository": "https://github.com/kyleIDMI/clear-writing-rules"
   },
   "plugins": [
     {
-      "name": "no-ai-slop-writing-rules",
-      "description": "Writing skills for removing AI slop and writing in a precise Rossmann-style voice",
+      "name": "clear-writing-rules",
+      "description": "Writing skill that enforces accuracy and strips AI-generated phrasing tells, while leaving tone to the writer",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/no-ai-slop",
-        "./skills/rossmann-voice"
+        "./skills/clear-writing"
       ]
     }
   ]

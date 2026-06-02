@@ -1,11 +1,13 @@
 ---
-name: no-ai-slop
-description: "Rules and worked examples for writing prose that does not read like AI-generated slop. Consult before writing or editing any prose."
+name: clear-writing
+description: "Rules and worked examples for writing clear, accurate, human-sounding prose for business communication. Consult before writing or editing any prose (emails, customer notes, memos, documentation)."
 ---
 
-# No AI Slop
+# Clear Writing
 
-The full rule list lives in the project `CLAUDE.md` (rules 1 through 24). This skill turns the rules that have worked examples into actionable guidance: each shows a WRONG version (the slop) and a RIGHT version (the fix). The pattern behind every fix is the same: replace the vague claim with a specific, checkable fact.
+This skill makes an agent write clearly and accurately, without the phrasing tells of unedited AI output. It enforces two things: every fact is real and supportable, and the prose sounds like a person wrote it. It does not dictate tone; a customer apology and a status update need different registers, and that judgment stays with the writer. The tone-scoped rules (9 and 14 in `CLAUDE.md`) target manufactured hype, not genuine warmth.
+
+The full rule list lives in the project `CLAUDE.md` (rules 1 through 24). This skill turns the rules that have worked examples into actionable guidance: each shows a WRONG version and a RIGHT version. The pattern behind every fix is the same: replace the vague claim with a specific, checkable fact.
 
 ## Rule 1: No emdashes
 
@@ -28,7 +30,7 @@ A sentence that asserts importance without a detail says nothing. End every clai
 - WRONG: "This practice has had a significant impact on people."
 - RIGHT: "The company replaced 11 million batteries in 2018, against the 1 to 2 million it had expected."
 
-## Rule 7: No structural slop (repetitive layouts)
+## Rule 7: No structural repetition (repetitive layouts)
 
 Three sections built from the same template read as machine output, even when each fact is true. Vary paragraph count, sentence rhythm, and how each section opens.
 
@@ -52,12 +54,12 @@ Three sections built from the same template read as machine output, even when ea
 - WRONG: "In today's world, planned obsolescence affects many devices."
 - RIGHT: "Apple, Samsung, and Google have each faced lawsuits alleging planned obsolescence."
 
-## Rule 13: Write like a researcher, not a copywriter
+## Rule 13: Write like a person who did the work, not a copywriter
 
-If a sentence could sit on any advocacy or marketing site without changing a word, it is generic. Anchor it to something checkable.
+If a sentence could sit on any company's marketing page without changing a word, it is generic. Anchor it to something checkable.
 
-- WRONG: "People deserve the right to repair their own devices."
-- RIGHT: "The FTC voted 5-0 in July 2021 to step up enforcement against illegal repair restrictions."
+- WRONG: "We are committed to providing excellent customer service."
+- RIGHT: "We respond to billing questions within one business day."
 
 ## Rule 15: No weasel words
 

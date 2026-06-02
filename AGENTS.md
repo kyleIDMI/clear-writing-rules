@@ -4,23 +4,20 @@ Guidelines for AI agents working in this repository.
 
 ## Repository Overview
 
-This repository publishes portable writing skills for AI agents. The installable skills live under `skills/` and follow the Agent Skills directory shape:
+This repository publishes a portable writing skill for AI agents. The installable skill lives under `skills/` and follows the Agent Skills directory shape:
 
 ```text
 skills/
-├── no-ai-slop/
-│   ├── SKILL.md
-│   └── references/
-└── rossmann-voice/
-    └── SKILL.md
+└── clear-writing/
+    ├── SKILL.md
+    └── references/
 ```
 
-The `.claude/skills/` directory is kept for Claude Code project-local use. Keep the skill content synchronized when changing either published skill.
+The `.claude/skills/` directory is kept for Claude Code project-local use. Keep the skill content synchronized when changing the published skill.
 
 ## Published Skills
 
-- `no-ai-slop`: Rules and worked examples for writing prose that does not read like AI-generated slop.
-- `rossmann-voice`: Louis Rossmann's writing voice for general prose.
+- `clear-writing`: Rules and worked examples for writing clear, accurate prose that does not read like AI-generated text. Tone-neutral; intended for business communication.
 
 ## Skill Format
 
