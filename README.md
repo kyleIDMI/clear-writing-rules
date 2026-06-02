@@ -1,5 +1,7 @@
 # Clear Writing Rules
 
+> **New here, or just want to use it?** Read the [plain-English Quick Start guide](docs/clear-writing-pilot.md). It explains what this does and how to turn it on in about two minutes, with no technical background needed.
+
 A portable Agent Skill that makes an AI agent write clearly, accurately, and like a human. It is general-purpose: emails, customer notes, internal memos, documentation, status updates, anything made of sentences. It is not tied to any wiki, CMS, or publishing system.
 
 Compatible with Claude Code, OpenAI Codex, Cursor, Windsurf, and agents that follow the [Agent Skills specification](https://agentskills.io/specification.md).
@@ -34,7 +36,7 @@ Anyone at the company who drafts written communication with an AI assistant: sup
 ### Desktop or web app (claude.ai)
 
 1. Enable the prerequisite: in Claude, go to **Settings > Capabilities** and turn on **Code execution and file creation**.
-2. Download the skill ZIP: [clear-writing.zip](https://github.com/kyleIDMI/clear-writing-rules/releases/latest/download/clear-writing.zip) (always the latest release).
+2. Download the skill ZIP: [clear-writing.zip](https://github.com/kyleIDMI/clear-writing-rules/releases/latest/download/clear-writing.zip) (a single file, about 12 KB). Use this file, **not** the green "Code" button at the top of the repo. That button downloads the whole repository and will fail to upload with a "more than one SKILL.md" error.
 3. Go to **Customize > Skills**, click **+**, choose **Create skill**, and upload the ZIP.
 4. It appears under **Personal skills**. Toggle it on.
 

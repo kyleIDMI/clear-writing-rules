@@ -72,7 +72,7 @@ Once installed, you do not need the prompt from Option A. Just write normally an
 If you use the Claude desktop app or claude.ai (not Claude Code), add the skill this way:
 
 1. First, turn on the capability it needs: go to **Settings > Capabilities** and make sure **"Code execution and file creation"** is on.
-2. Download the skill file: **https://github.com/kyleIDMI/clear-writing-rules/releases/latest/download/clear-writing.zip**
+2. Download the skill file: **https://github.com/kyleIDMI/clear-writing-rules/releases/latest/download/clear-writing.zip** (This is a single file, about 12 KB, named `clear-writing.zip`. Do not use the green "Code" button on the repo page; that downloads the whole project and will not upload.)
 3. In Claude, go to **Customize > Skills**, click the **"+"**, choose **"Create skill"**, and upload the file you just downloaded.
 4. It appears under **Personal skills**. Switch it on.
 
