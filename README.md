@@ -47,21 +47,6 @@ An admin can upload the same ZIP as an organization skill to make it available t
 /plugin install clear-writing-rules
 ```
 
-### CLI install
-
-```bash
-npx skills add kyleIDMI/clear-writing-rules
-```
-
-Skills install to `.agents/skills/` in your project.
-
-### Clone and copy
-
-```bash
-git clone https://github.com/kyleIDMI/clear-writing-rules.git
-cp -r clear-writing-rules/skills/* your-project/.agents/skills/
-```
-
 You can also read the files yourself as a style guide. Every file here obeys its own rules, so they double as worked examples.
 
 ## What each file does
